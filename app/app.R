@@ -1,8 +1,10 @@
 library(echarts4r)
 library(magrittr)
 library(shiny)
-colony <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-01-11/colony.csv')
-stressor <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-01-11/stressor.csv')
+colony <- read.csv("data/colony.csv")
+stressor <- readr::read_csv('data/stressor.csv')
+head(stressor)
+
 
 stressor %<>% 
   dplyr::mutate(
